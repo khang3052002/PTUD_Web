@@ -174,3 +174,33 @@ h3{
     line-height: 1.5em;
     background: orange;
 }
+.notify-list{
+    margin-top: 5px;
+    
+}
+.title{
+    background-color: rgb(245, 217, 182);
+    padding: 5px;
+}
+.notify-item{
+    /* padding: 8px; */
+    margin: 0px 0px 3px 5px;
+    border: 1px solid rgb(191, 190, 190);
+}
+i{
+    font-size: 0.8em;
+    padding: 2px;
+    margin: 4px;
+}
+#icon-down{
+    display: none;
+}
+label{
+    color: #e89224;
+}
+.content{
+    padding: 8px;
+    background-color: white;
+    margin: 8px 10px 10px 25px;
+    display: none;
+}
