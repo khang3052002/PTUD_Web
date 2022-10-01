@@ -65,7 +65,8 @@ $(function () {
             
         });
 
-
+    var temp_1 = document.querySelectorAll('.notify-item');
+    console.log(temp_1);
     // Xử lí bật tắt side thông báo
     displayNotify();
     
@@ -75,15 +76,26 @@ $(function () {
 function displayNotify()
 {
     var openNotify  = [false,false,false,false];
-    console.log('hahahaa');
     if($('#notify-1').click(function()
     {   
         if(openNotify[0] == false){
             openNotify[0] = true;
             console.log('hahahaa');
+            $('#notify-1 .title').css("background-color","orange");
             $('#notify-1 .content').css("display","block");
+            $('#notify-1 #icon-right').css("display","none");
+            $('#notify-1 #icon-down').css("display","inline");
+
+            $('#notify-1 .title').css("color","white");
+            $('#notify-1 .news').css("color","white");
+
         }
         else{
+            $('#notify-1 .title').css("color","#333");
+            $('#notify-1 .news').css("color","#e89224");
+            $('#notify-1 #icon-right').css("display","inline");
+            $('#notify-1 #icon-down').css("display","none");
+            $('#notify-1 .title').css("background-color","#fcc782");
             $('#notify-1 .content').css("display","none");
             openNotify[0] = false;
         }
@@ -96,9 +108,19 @@ function displayNotify()
         if(openNotify[1] == false){
             openNotify[1] = true;
             console.log('hahahaa');
+            $('#notify-2 .title').css("background-color","orange");
             $('#notify-2 .content').css("display","block");
+            $('#notify-2 #icon-right').css("display","none");
+            $('#notify-2 #icon-down').css("display","inline");
+            $('#notify-2 .title').css("color","white");
+            $('#notify-2 .news').css("color","white");
         }
         else{
+            $('#notify-2 .title').css("color","#333");
+            $('#notify-2 .news').css("color","#e89224");
+            $('#notify-2 #icon-right').css("display","inline");
+            $('#notify-2 #icon-down').css("display","none");
+            $('#notify-2 .title').css("background-color","#fcc782");
             $('#notify-2 .content').css("display","none");
             openNotify[1] = false;
         }
@@ -110,9 +132,19 @@ function displayNotify()
         if(openNotify[2] == false){
             openNotify[2] = true;
             console.log('hahahaa');
+            $('#notify-3 .title').css("background-color","orange");
             $('#notify-3 .content').css("display","block");
+            $('#notify-3 #icon-right').css("display","none");
+            $('#notify-3 #icon-down').css("display","inline");3
+            $('#notify-3 .title').css("color","white");
+            $('#notify-3 .news').css("color","white");
         }
         else{
+            $('#notify-3 .title').css("color","#333");
+            $('#notify-3 .news').css("color","#e89224");
+            $('#notify-3 #icon-right').css("display","inline");
+            $('#notify-3 #icon-down').css("display","none");
+            $('#notify-3 .title').css("background-color","#fcc782");
             $('#notify-3 .content').css("display","none");
             openNotify[2] = false;
         }
@@ -124,9 +156,19 @@ function displayNotify()
         if(openNotify[3] == false){
             openNotify[3] = true;
             console.log('hahahaa');
+            $('#notify-4 .title').css("background-color","orange");
             $('#notify-4 .content').css("display","block");
+            $('#notify-4 #icon-right').css("display","none");
+            $('#notify-4 #icon-down').css("display","inline");4
+            $('#notify-4 .title').css("color","white");
+            $('#notify-4 .news').css("color","white");
         }
         else{
+            $('#notify-4 .title').css("color","#333");
+            $('#notify-4 .news').css("color","#e89224");
+            $('#notify-4 #icon-right').css("display","inline");
+            $('#notify-4 #icon-down').css("display","none");
+            $('#notify-4 .title').css("background-color","#fcc782");
             $('#notify-4 .content').css("display","none");
             openNotify[3] = false;
         }

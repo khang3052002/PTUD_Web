@@ -196,7 +196,7 @@ h3{
 .notify-item:hover .title{
     /* padding: 8px; */
     /* cursor: pointer; */
-    background-color: orange;
+    /* background-color: orange; */
 }
 i{
     font-size: 0.8em;
@@ -206,7 +206,7 @@ i{
 #icon-down{
     display: none;
 }
-label{
+.news{
     color: #e89224;
 }
 .content{
