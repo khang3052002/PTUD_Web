@@ -193,11 +193,7 @@ h3{
     cursor: pointer;
     /* background-color: orange; */
 }
-.notify-item:hover .title{
-    /* padding: 8px; */
-    /* cursor: pointer; */
-    /* background-color: orange; */
-}
+
 i{
     font-size: 0.8em;
     padding: 2px;

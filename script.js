@@ -71,6 +71,32 @@ $(function () {
     displayNotify();
     DragDrop();
         // $('.content').css("display","block");
+    
+    //checkInput();
+    $('form').submit(function(event)
+    {
+        // xu li ma so
+        var maSo = document.querySelector('#maso').value;
+        var regex_maSo =/^1[7-9]{1}|2[0-2]{1}[0-9]{6}$/;
+        var flag_maSo = regex_maSo.test(maSo);
+        console.log(flag_maSo);
+        //xu li dien thoai
+        var dienThoai = document.querySelector('#dienthoai').value;
+        var regex_dt =/^[0]{1}[0-9]{9}$/;
+        var flag_dt = regex_dt.test(dienThoai);
+
+        console.log(flag_dt);
+
+        // xu li email
+        var email = document.querySelector('#email').value;
+        var regex_email = /^[a-z][a-z0-9_\.]{5,32}@[a-z0-9]{2,}(\.[a-z0-9]{2,}){1,3}$/;
+        var flag_email = regex_email.test(email);
+
+        console.log(flag_email);
+
+
+        event.preventDefault();
+    });
 });
 
 function displayNotify()
@@ -88,7 +114,7 @@ function displayNotify()
 
             $('#notify-1 .title').css("color","white");
             $('#notify-1 .news').css("color","white");
-
+            $('#notify-1 .title').css("border","1px solid blue");
         }
         else{
             $('#notify-1 .title').css("color","#333");
@@ -97,6 +123,7 @@ function displayNotify()
             $('#notify-1 #icon-down').css("display","none");
             $('#notify-1 .title').css("background-color","#fcc782");
             $('#notify-1 .content').css("display","none");
+            $('#notify-1 .title').css("border","none");
             openNotify[0] = false;
         }
         
@@ -114,6 +141,7 @@ function displayNotify()
             $('#notify-2 #icon-down').css("display","inline");
             $('#notify-2 .title').css("color","white");
             $('#notify-2 .news').css("color","white");
+            $('#notify-2 .title').css("border","1px solid blue");
         }
         else{
             $('#notify-2 .title').css("color","#333");
@@ -122,6 +150,7 @@ function displayNotify()
             $('#notify-2 #icon-down').css("display","none");
             $('#notify-2 .title').css("background-color","#fcc782");
             $('#notify-2 .content').css("display","none");
+            $('#notify-2 .title').css("border","none");
             openNotify[1] = false;
         }
         
@@ -138,6 +167,7 @@ function displayNotify()
             $('#notify-3 #icon-down').css("display","inline");3
             $('#notify-3 .title').css("color","white");
             $('#notify-3 .news').css("color","white");
+            $('#notify-3 .title').css("border","1px solid blue");
         }
         else{
             $('#notify-3 .title').css("color","#333");
@@ -146,6 +176,7 @@ function displayNotify()
             $('#notify-3 #icon-down').css("display","none");
             $('#notify-3 .title').css("background-color","#fcc782");
             $('#notify-3 .content').css("display","none");
+            $('#notify-3 .title').css("border","none");
             openNotify[2] = false;
         }
         
@@ -162,6 +193,7 @@ function displayNotify()
             $('#notify-4 #icon-down').css("display","inline");4
             $('#notify-4 .title').css("color","white");
             $('#notify-4 .news').css("color","white");
+            $('#notify-4 .title').css("border","1px solid blue");
         }
         else{
             $('#notify-4 .title').css("color","#333");
@@ -170,6 +202,7 @@ function displayNotify()
             $('#notify-4 #icon-down').css("display","none");
             $('#notify-4 .title').css("background-color","#fcc782");
             $('#notify-4 .content').css("display","none");
+            $('#notify-4 .title').css("border","none");
             openNotify[3] = false;
         }
         
@@ -180,30 +213,20 @@ function displayNotify()
 
 function DragDrop()
 {
-    // var list_item = $('.notify-item');
-    // for(let i in list_item)
-    // {
-    //     $(list_item[i]).draggable();
-    // }
-    // $('#notify-1').draggable(function()
-    // {
-
-    //     console.log('hehehe');
-    //     $('#notify-1').css(("z-index","1000"),("position","absolute"));
-    // });
-    // $('#notify-2').draggable();
-    // $('#notify-3').draggable();
-    // $('#notify-4').draggable();
-
-    // $('.dkhp').droppable({
-    //     accept: "#notify-item"
-    // })
+    
     $('.notify-item').draggable({
         containment : ".dkhp",
         zIndex: 10000,
         revert: false,
-        // helper: "clone"
     });
     
     
+}
+
+function checkInput()
+{
+    // xu li ma so
+    var maSo = document.querySelector('#maso')
+    var str_maso = maSo.value;
+    console.log(str_maso);
 }
