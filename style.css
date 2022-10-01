@@ -59,6 +59,11 @@ ul{
     height: 600px;
 
 }
+.main{
+    border-right: 2px dotted rgb(52, 105, 209);
+    /* margin-right: 66px; */
+    padding-right: 4px;
+}
 .container h2{
     text-transform: uppercase;
     color: orange;
@@ -148,7 +153,24 @@ h3{
     border-radius: 3px;
 }
 .infor{
+    margin-top: 10px;
+}
+.inf-header{
+
+    /* background-color: orange; */
     display: grid;
     grid-template-columns: 0.6fr 1fr 0.6fr 0.8fr;
     grid-template-rows: 1.7em;
+    font-weight: bold;
+    color: #faf3f3;
+    text-align: center;
+    vertical-align:auto;
+    grid-gap: 0.1em;
+}
+.inf{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    line-height: 1.5em;
+    background: orange;
 }
