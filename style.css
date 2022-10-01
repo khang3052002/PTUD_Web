@@ -179,7 +179,7 @@ h3{
     
 }
 .title{
-    background-color: rgb(245, 217, 182);
+    background-color: #fcc782;
     padding: 5px;
 }
 .notify-item{
@@ -203,4 +203,26 @@ label{
     background-color: white;
     margin: 8px 10px 10px 25px;
     display: none;
+    color: blue;
+}
+.footer{
+    height: 1.5em;
+    background-color: #FFE0B2;
+    color: #e89224;
+    
+    margin-top: 5px;
+    box-shadow: 0 4px 8px 0 #aca9a9;
+    border-radius: 2px;
+    text-align: center;
+    line-height: 1.3em;
+}
+.copy{
+    display: inline;
+    margin-right: 10px;
+}
+.item{
+    display: inline;
+    margin: 0 4px;}
+.list-menu{
+    display: inline;
 }
