@@ -188,6 +188,16 @@ h3{
     margin: 0px 0px 3px 5px;
     border: 1px solid rgb(191, 190, 190);
 }
+.notify-item:hover{
+    /* padding: 8px; */
+    cursor: pointer;
+    /* background-color: orange; */
+}
+.notify-item:hover .title{
+    /* padding: 8px; */
+    /* cursor: pointer; */
+    background-color: orange;
+}
 i{
     font-size: 0.8em;
     padding: 2px;
