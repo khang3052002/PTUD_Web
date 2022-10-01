@@ -94,3 +94,61 @@ ul{
 #sex-input{
     margin-left:8px ;
 }
+h3{
+    color: orange;
+}
+.subject{
+
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 0.1fr 1fr;
+    grid-template-rows: 20px auto;
+}
+.container-subj
+{
+    padding: 4px 8px 8px 8px;
+    border: 2px solid #e2dddd;
+}
+.subj{
+    background-color: rgb(241, 235, 235);
+    border: 2px solid #c8c3c3;
+    padding: 2px 0 2px 2px;
+    margin-bottom: 5px;
+}
+.button{
+    text-align: center;
+    float: center;
+    display: flex;
+    flex-direction: column;
+    
+    justify-content: center;
+    margin: 0 10px 0 10px;
+}
+.button input{
+    /* min-width: 28px; */
+    padding: 4px;
+    border: 2px solid orange;
+    background-color: white;
+}
+.right{
+    text-align: right;
+}
+.submit-btn{
+    margin: 5px 0px;
+    text-align: center;
+}
+.subm-btn
+{
+    padding: 2px 15px;
+    color: #333;
+    border: 2px solid orange;
+    background-color: white;
+}
+.border-rad{
+    border-radius: 3px;
+}
+.infor{
+    display: grid;
+    grid-template-columns: 0.6fr 1fr 0.6fr 0.8fr;
+    grid-template-rows: 1.7em;
+}
