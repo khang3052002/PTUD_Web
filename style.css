@@ -210,9 +210,9 @@ i{
     color: #e89224;
 }
 .content{
-    padding: 8px;
+    padding: 20px 12px 20px 40px;
     background-color: white;
-    margin: 8px 10px 10px 25px;
+    /* margin: 8px 10px 10px 25px; */
     display: none;
     color: blue;
 }

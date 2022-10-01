@@ -69,7 +69,7 @@ $(function () {
     console.log(temp_1);
     // Xử lí bật tắt side thông báo
     displayNotify();
-    
+    DragDrop();
         // $('.content').css("display","block");
 });
 
@@ -176,4 +176,34 @@ function displayNotify()
     }
     );
         
+}
+
+function DragDrop()
+{
+    // var list_item = $('.notify-item');
+    // for(let i in list_item)
+    // {
+    //     $(list_item[i]).draggable();
+    // }
+    // $('#notify-1').draggable(function()
+    // {
+
+    //     console.log('hehehe');
+    //     $('#notify-1').css(("z-index","1000"),("position","absolute"));
+    // });
+    // $('#notify-2').draggable();
+    // $('#notify-3').draggable();
+    // $('#notify-4').draggable();
+
+    // $('.dkhp').droppable({
+    //     accept: "#notify-item"
+    // })
+    $('.notify-item').draggable({
+        containment : ".dkhp",
+        zIndex: 10000,
+        revert: false,
+        // helper: "clone"
+    });
+    
+    
 }
