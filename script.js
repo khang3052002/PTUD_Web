@@ -272,31 +272,16 @@ $(function () {
             document.getElementById("body-info").innerHTML = html;
             $('.value-infor .white').removeClass('inf'); 
             $('.value-infor .orange').removeClass('inf');
-            // if(count % 2 == 1)
-            // {
-            //     $('.value-infor .inf').addClass('white');
 
-            //     $('.value-infor .white').css("background-color","white");
-            // }
-            // else{
-            //     $('.value-infor .inf').addClass('orange');
-            //     $('.value-infor .orange').css("background-color","#FFE0B2");
-            // }
-            // count++;
-        //     console.log('conunt:'+ count);
         }
-
-        
-
-
-        // else if(check_validation == true && notify_subj.length == 0)
-        // {
-        //     alert('Bạn chưa chọn môn học');
-        // }
-        // else if(check_validation == false)
-        // {
-        //     alert('Thông tin nhập không hợp lệ');
-        // }
+        else if(check_validation == true && notify_subj.length == 0)
+        {
+            alert('Bạn chưa chọn môn học');
+        }
+        else if(check_validation == false)
+        {
+            alert('Thông tin nhập không hợp lệ');
+        }
 
 
 
@@ -508,8 +493,7 @@ function resetForm(e)
 }
 function chooseSubject()
 {
-    // var akaka = document.querySelectorAll('#container-subj>.subj');
-    // console.log(akaka);
+    
 
     $('#btn_choose_all').click(function()
     {
@@ -533,12 +517,6 @@ function chooseSubject()
         $('#container-subj').append(list_all_subj);
         $('.subj').css("background-color","rgb(241, 235, 235)");
 
-        // for(let i in list_all_subj)
-        // {
-        //     $(list_all_subj[i]).removeClass('subj-choosed');
-        //     $('#container-subj').append(list_all_subj[i]);
-        //     $('.subj').css("background-color","rgb(241, 235, 235)");
-        // }
 
         console.log($('#container-subj .subj'));
         console.log($('#container-subj-choosed .subj-choosed'));
