@@ -283,55 +283,6 @@ $(function () {
             alert('Thông tin nhập không hợp lệ');
         }
 
-
-
-
-        // 
-        // if(notify_subj.length == 0)
-        // {
-        //     alert('Bạn chưa chọn môn học');
-        // }
-        // else{
-        //     let total;
-        //     for(var item of notify_subj)
-        //     {
-        //         // console.log($(item).text());
-        //         total += $(item).text() + '\n';
-        //     }
-        //     alert(total);
-        // }
-        
-        // console.log(notify_subj);
-        // notify_subj.forEach((item)=>
-        // {
-        //     console.log(item);
-        // });
-        // notify_subj.forEach(item)
-        // {
-        //     console.log("hahahah");
-        // }
-        
-        
-        // console.log(id);
-        // console.log($(id).text());
-
-        // for(let i in notify_subj)
-        // {
-        //     var id =$(notify_subj[i]).attr('id');
-        //     id = '#'+id;
-        //     console.log($(id).text());
-        // }
-        // var id_item;
-        // $(notify_subj).inArray()
-        // for(let i in notify_subj)
-        // {
-        //     id_item= $(notify_subj[i]).attr('id');
-        //     id_item = '#'+id_item;
-        //     console.log(id_item);
-        //     // alert($(notify_subj[i]).innerText()) ;
-        //     // console.log($('#'+id).text());
-        // }
-        // alert()
         event.preventDefault();
     });
     
@@ -339,19 +290,16 @@ $(function () {
     $('#xoa').click(function()
     {
         var list_all_subj = $('#container-subj-choosed .subj-choosed');
-        // var list_all_temp = list_all_subj;
         console.log(list_all_subj);
         $(list_all_subj).removeClass('subj-choosed');
         $('#container-subj').append(list_all_subj);
         $('.subj').css("background-color","rgb(241, 235, 235)");
-
 
         $('.row-input i').css("display","none");
         $('form').trigger("reset");
     });
 
     
-    //backChooseSubj();
 
 
 });
@@ -493,12 +441,9 @@ function resetForm(e)
 }
 function chooseSubject()
 {
-    
-
     $('#btn_choose_all').click(function()
     {
         var list_all_subj = $('#container-subj .subj');
-        // var list_all_temp = list_all_subj;
         console.log(list_all_subj);
         $(list_all_subj).addClass('subj-choosed');
         $('#container-subj-choosed').append(list_all_subj);
@@ -511,7 +456,6 @@ function chooseSubject()
     $('#btn_back_all').click(function()
     {
         var list_all_subj = $('#container-subj-choosed .subj-choosed');
-        // var list_all_temp = list_all_subj;
         console.log(list_all_subj);
         $(list_all_subj).removeClass('subj-choosed');
         $('#container-subj').append(list_all_subj);
@@ -542,10 +486,6 @@ function chooseSubject()
                 var index = list_subj_choose.indexOf(e.target);
                 list_subj_choose.splice(index,1);
             }
-            // for(let i in list_subj_choose)
-            // {
-            //     console.log(list_subj_choose[i]);
-            // }
 
         })  
     });
@@ -561,8 +501,6 @@ function chooseSubject()
                 
                 $('.subj-choosed').css("background-color","yellow");
                 $('.subj-choosed').css("color","black");
-                // console.log($('#container-subj .subj'));
-                // console.log($('#container-subj-choosed .subj-choosed'));
                 
             }
             document.querySelectorAll('.subj-choosed').forEach((item) => {
@@ -594,8 +532,6 @@ function chooseSubject()
                         $(list_subj_choosed[i]).removeClass('subj-choosed')
                         $('#container-subj').append(list_subj_choosed[i]);
                         $('#container-subj' + ' #'+subj).css("background-color", "rgb(241, 235, 235)");
-                        // var index = list_subj_choosed.indexOf(list_subj_choosed[i]);
-                        // list_subj_choosed.splice(index,1);
                     }
         
                 });

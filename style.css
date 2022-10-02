@@ -16,7 +16,6 @@
     justify-content: center;
     align-items: center;
     margin-top:  8px;
-    /* box-shadow: 3px 3px #b3b1b1; */
     box-shadow: 4px 8px 8px #aca9a9;
     border-radius: 2px;
 }
@@ -27,7 +26,6 @@ h1{
     display: flex;
     justify-content: center;
     color: rgb(52 105 209);
-
     left: 465px;
     top: 95px;
     z-index: 1;
@@ -52,17 +50,14 @@ ul{
     height: 1px;
     background: rgb(52 105 209);
     margin-top: 30px;
-    /* color: rgb(52 105 209); */
 }
 .container{
     display: grid;
     grid-template-columns: 840px auto;
-    /* height: 600px; */
 
 }
 .main{
     border-right: 2px dotted rgb(52, 105, 209);
-    /* margin-right: 66px; */
     padding-right: 4px;
 }
 .container h2{
@@ -105,7 +100,6 @@ ul{
 
 .lable{
     display: inline;
-    /* max-width: 20px; */
     min-width: 100px;
     text-align: right;
 }
@@ -130,16 +124,9 @@ h3{
 {
     padding: 4px 8px 8px 8px;
     border: 2px solid #e2dddd;
-    height: 267px;
+    height: 267px;   
+}
 
-    
-}
-#container-subj-choosed{
-}
-.subj-choosed
-{
-
-}
 .subj{
     background-color: rgb(241, 235, 235);
     border: 2px solid #c8c3c3;
@@ -156,7 +143,6 @@ h3{
     margin: 0 10px 0 10px;
 }
 .button input{
-    /* min-width: 28px; */
     padding: 4px;
     border: 2px solid orange;
     background-color: white;
@@ -187,7 +173,6 @@ h3{
 }
 .inf-header{
 
-    /* background-color: orange; */
     display: grid;
     grid-template-columns: 0.6fr 1fr 0.6fr 0.8fr;
     grid-template-rows: 1.7em;
@@ -235,17 +220,12 @@ h3{
     background-color: #fcc782;
     padding: 5px;
 }
-.notify-item{
-    /* padding: 8px; */
+.notify-item{ 
     margin: 0px 0px 3px 5px;
     border: 1px solid rgb(191, 190, 190);
 }
 .notify-item:hover{
-    /* padding: 8px; */
     cursor: pointer;
-    /* background-color: orange; */
-    /* background-color: #f1eaea; */
-
 }
 
 i{
@@ -262,7 +242,6 @@ i{
 .content{
     padding: 20px 12px 20px 40px;
     background-color: white;
-    /* margin: 8px 10px 10px 25px; */
     display: none;
     color: blue;
 }
@@ -285,7 +264,8 @@ i{
 .item{
     display: inline;
     margin: 0 4px;
-    /* background-color: orange; */
+    text-decoration: 1px underline;
+    
 }
 .list-menu{
     display: inline;
