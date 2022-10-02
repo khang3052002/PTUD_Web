@@ -71,7 +71,7 @@ $(function () {
     displayNotify();
     DragDrop();
         // $('.content').css("display","block");
-    
+    chooseSubject();
     //checkInput();
     $('form').submit(function(event)
     {
@@ -173,16 +173,26 @@ $(function () {
             
         }
         //console.log(list);
-        
-
+        var notify_subj = $('#container-subj-choosed .subj-choosed');
+        // console.log(notify_subj);
+        for(let i in notify_subj)
+        {
+            alert($(notify_subj[i]).text()) ;
+        }
+        // alert()
         event.preventDefault();
     });
-
+    
     $('#xoa').click(function()
     {
         $('.row-input i').css("display","none");
         $('form').trigger("reset");
     });
+
+    
+    //backChooseSubj();
+
+
 });
 
 function displayNotify()
@@ -319,4 +329,125 @@ function checkInput()
 function resetForm(e)
 {
     $('form').trigger("reset");
+}
+function chooseSubject()
+{
+    // var akaka = document.querySelectorAll('#container-subj>.subj');
+    // console.log(akaka);
+
+    $('#btn_choose_all').click(function()
+    {
+        var list_all_subj = $('#container-subj .subj');
+        // var list_all_temp = list_all_subj;
+        console.log(list_all_subj);
+        $(list_all_subj).addClass('subj-choosed');
+        $('#container-subj-choosed').append(list_all_subj);
+        $('.subj-choosed').css("background-color","yellow");
+        console.log($('#container-subj .subj'));
+        console.log($('#container-subj-choosed .subj-choosed'));
+
+    });
+
+    $('#btn_back_all').click(function()
+    {
+        var list_all_subj = $('#container-subj-choosed .subj-choosed');
+        // var list_all_temp = list_all_subj;
+        console.log(list_all_subj);
+        $(list_all_subj).removeClass('subj-choosed');
+        $('#container-subj').append(list_all_subj);
+        $('.subj').css("background-color","rgb(241, 235, 235)");
+
+        // for(let i in list_all_subj)
+        // {
+        //     $(list_all_subj[i]).removeClass('subj-choosed');
+        //     $('#container-subj').append(list_all_subj[i]);
+        //     $('.subj').css("background-color","rgb(241, 235, 235)");
+        // }
+
+        console.log($('#container-subj .subj'));
+        console.log($('#container-subj-choosed .subj-choosed'));
+    });
+
+
+    var list_subj_choose=[];
+    var list_subj_choosed =[];
+    document.querySelectorAll('#container-subj>.subj').forEach((item) => {
+        
+        item.addEventListener('click', (e) => {
+            // console.log(e.target);
+            var subj =  $(e.target).attr('id');
+            // console.log(subj);
+            $('#'+subj).css("background-color","#FF9800");
+            if(!list_subj_choose.includes(e.target))
+            {
+                list_subj_choose.push(e.target);
+            }else{
+                $('#'+subj).css("background-color","rgb(241, 235, 235)");
+                var index = list_subj_choose.indexOf(e.target);
+                list_subj_choose.splice(index,1);
+            }
+            // for(let i in list_subj_choose)
+            // {
+            //     console.log(list_subj_choose[i]);
+            // }
+
+        })  
+    });
+    $('#btn_choose').click(function()
+        {
+            for(let i in list_subj_choose)
+            {
+                
+                $(list_subj_choose[i]).addClass('subj-choosed');
+                var container_subj_choosed = document.getElementById('container-subj-choosed');
+                container_subj_choosed.appendChild(list_subj_choose[i]);
+                
+                
+                $('.subj-choosed').css("background-color","yellow");
+                
+                console.log($('#container-subj .subj'));
+                console.log($('#container-subj-choosed .subj-choosed'));
+                
+            }
+            document.querySelectorAll('.subj-choosed').forEach((item) => {
+                console.log('gogog');
+                item.addEventListener('click', (e) => {
+                    // console.log(e.target);
+                    var subj =  $(e.target).attr('id');
+                    // console.log(subj);
+                    $('#'+subj).css("background-color","#FF9800");
+                    if(!list_subj_choosed.includes(e.target))
+                    {
+                        list_subj_choosed.push(e.target);
+                    }else{
+                        $('#container-subj-choosed' +' #'+subj).css("background-color","yellow");
+                        var index = list_subj_choosed.indexOf(e.target);
+                        list_subj_choosed.splice(index,1);
+                    }
+                    
+                })
+                
+            });
+            $('#btn_back').click(function()
+                {
+                    for(let i in list_subj_choosed)
+                    {
+                        var subj =  $(list_subj_choosed[i]).attr('id');
+                        $(list_subj_choosed[i]).removeClass('subj-choosed')
+                        $('#container-subj').append(list_subj_choosed[i]);
+                        $('#container-subj' + ' #'+subj).css("background-color", "rgb(241, 235, 235)");
+                        // var index = list_subj_choosed.indexOf(list_subj_choosed[i]);
+                        // list_subj_choosed.splice(index,1);
+                    }
+        
+                });
+        });
+    
+
+
+
+    
+
+
+    
 }

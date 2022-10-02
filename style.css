@@ -102,7 +102,12 @@ ul{
 #xmark{
     display: none;
 }
-
+/* #dangki:hover{
+    cursor: pointer;
+}
+#xoa :hover{
+    cursor: pointer;
+} */
 .lable{
     display: inline;
     /* max-width: 20px; */
@@ -126,10 +131,19 @@ h3{
     grid-template-columns: 1fr 0.1fr 1fr;
     grid-template-rows: 20px auto;
 }
-.container-subj
+#container-subj , #container-subj-choosed
 {
     padding: 4px 8px 8px 8px;
     border: 2px solid #e2dddd;
+    height: 267px;
+
+    
+}
+#container-subj-choosed{
+}
+.subj-choosed
+{
+    
 }
 .subj{
     background-color: rgb(241, 235, 235);
@@ -165,6 +179,9 @@ h3{
     color: #333;
     border: 2px solid orange;
     background-color: white;
+}
+.subm-btn:hover{
+    cursor: pointer;
 }
 .border-rad{
     border-radius: 3px;
