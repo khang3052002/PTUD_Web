@@ -30,37 +30,49 @@
                 <div class="line-2"></div>
                 <form action="">
                     <div class="input-form">
-                        <div class="row-input" >
+                        <div class="row-input" id="input-maso">
                             <div class="lable">Mã số:</div>     
-                            <input type="text"class="input" id="maso">
+                            <input type="text"class="input" id="maso" required >
+                            <!-- <i class="fa fa-user icon"></i> -->
+                            <i class="fa-solid fa-xmark" id="xmark" ></i>
+                            <i class="fa-solid fa-check" id="tick_check"></i>
+                            
                         </div>
-                        <div class="row-input" >
+                        <div class="row-input" id="input-hoten">
                            <div class="lable">Họ và tên: </div> 
-                            <input type="text"class="input" id="hoten">
+                            <input type="text"class="input" id="hoten" required>
+                            <i class="fa-solid fa-xmark" id="xmark" ></i>
+                            <i class="fa-solid fa-check" id="tick_check"></i>
                         </div>
-                        <div class="row-input" >
+                        <div class="row-input" id="input-diachi">
                             
                             <div class="lable">Địa chỉ:</div>
-                            <input type="text" class="input" id="diachi">
+                            <input type="text" class="input" id="diachi" required>
+                            <i class="fa-solid fa-xmark" id="xmark" ></i>
+                            <i class="fa-solid fa-check" id="tick_check"></i>
                         </div>
-                        <div class="row-input" >
+                        <div class="row-input" id="input-dt">
                             
                             <div class="lable">Điện thoại:</div>
-                            <input type="text" class="input"id="dienthoai">
+                            <input type="text" class="input"id="dienthoai" required>
+                            <i class="fa-solid fa-xmark" id="xmark" ></i>
+                            <i class="fa-solid fa-check" id="tick_check"></i>
                         </div>
                         <div class="row-input" id="gioitinh">
                              <div class="lable">Giới tính:</div>
-                            <input type="radio" name="sex" id="sex-input">Nam 
-                            <input type="radio" name="sex" id="sex-input">Nữ
+                            <input type="radio" name="sex" class="sex-input" id="nam" required>Nam 
+                            <input type="radio" name="sex" class="sex-input" id="nu" required>Nữ
                             
                         </div>
                         <div class="row-input" >
                              <div class="lable">Ngày sinh:</div>
-                            <input type="date" class="input" id="ngaysinh">
+                            <input type="date" class="input" id="ngaysinh" required>
                         </div>
-                        <div class="row-input" >
+                        <div class="row-input" id="input-email">
                              <div class="lable">Email:</div> 
-                            <input type="text" class="input" id="email">
+                            <input type="text" class="input" id="email" required>
+                            <i class="fa-solid fa-xmark" id="xmark" ></i>
+                            <i class="fa-solid fa-check" id="tick_check"></i>
                         </div>
                     </div>
 

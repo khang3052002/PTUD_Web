@@ -87,6 +87,22 @@ ul{
     margin: 5px;
 
 }
+.row-input i{
+    z-index: 1;
+    position: absolute;
+    left: 960px;
+    line-height: 0.5em;
+    color: red;
+    font-size: 1em;
+}
+#tick_check{
+    color: rgb(42, 245, 11);
+    display: none;
+}
+#xmark{
+    display: none;
+}
+
 .lable{
     display: inline;
     /* max-width: 20px; */
@@ -97,7 +113,7 @@ ul{
     flex: 1;
     margin-left: 5px;
 }
-#sex-input{
+.sex-input{
     margin-left:8px ;
 }
 h3{
