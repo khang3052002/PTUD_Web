@@ -64,7 +64,7 @@ $(function () {
             }
             
         });
-
+    var arr =[];
     var temp_1 = document.querySelectorAll('.notify-item');
     console.log(temp_1);
     // Xử lí bật tắt side thông báo
@@ -73,6 +73,7 @@ $(function () {
         // $('.content').css("display","block");
     chooseSubject();
     //checkInput();
+    let count = 1;
     $('form').submit(function(event)
     {
         // xu li ma so
@@ -134,9 +135,8 @@ $(function () {
         {flag: flag_hoTen, id: '#hoten'},
         {flag: flag_diaChi, id: '#diachi'},
         {flag: flag_dt, id: '#dienthoai'},
-        {flag: flag_email, id:'#email'}
-    ]
-    console.log(list);
+        {flag: flag_email, id:'#email'}];
+    
         var temp_id_old;
         for(let i in list)
         {
@@ -155,7 +155,7 @@ $(function () {
                 
             }
             else{
-                console.log('hahahaha');
+                // console.log('hahahaha');
                 temp_id_old = $(list[i].id).parent().attr('id');
                 temp_id_old = '#' + temp_id_old;
                 $(temp_id_old +' #tick_check').css("display","inline");
@@ -173,18 +173,194 @@ $(function () {
             
         }
         //console.log(list);
-        var notify_subj = $('#container-subj-choosed .subj-choosed');
-        // console.log(notify_subj);
-        for(let i in notify_subj)
+        var check_validation = true;
+        for(let i in list)
         {
-            alert($(notify_subj[i]).text()) ;
+            if(list[i].flag == false)
+            {
+                check_validation = false;
+                break;
+            }
         }
+        console.log('check: ' + check_validation);
+        var notify_subj = $('.subj-choosed');
+        console.log(notify_subj.length);
+        
+
+        if(check_validation == true && notify_subj.length != 0)
+        {
+            let total= 'Bạn đã đăng kí: \n';
+            for(var item of notify_subj)
+            {
+                // console.log($(item).text());
+                total += $(item).text() + '\n';
+            }
+            alert(total);
+
+            var temp_arr =[];
+            temp_arr["id"] = maSo;
+            temp_arr["name"] = hoTen;
+            temp_arr["sex"] = gioiTinh;
+            temp_arr["birthday"] = day;
+            arr.push(temp_arr);
+            console.log(arr);
+
+            // console.log('hehehe');
+            // var div = document.createElement('div');
+            // $('div').addClass('value-info'+count);
+            // $('.infor').append('<div class="value-infor"></div>');
+
+            // // $('.infor').append($('div').addClass('value-info'+count));
+
+
+
+            // $('.value-infor').append('<div class="inf" id="id"></div>');
+            // $('.value-infor #id').append(maSo);
+            // $('.value-infor').append('<div class="inf" id="name"></div>');
+            // $('.value-infor #name').append(hoTen);
+            // $('.value-infor').append('<div class="inf" id="sex-info"></div>');
+            // $('.value-infor #sex-info').append(gioiTinh);
+            // $('.value-infor ').append('<div class="inf" id="birthday"></div>');
+            // $('.value-infor #birthday').append(day);
+            // if(count % 2 == 1)
+            // {
+            //     $('.value-infor .inf').css("background-color","white");
+            // }
+            // else{
+            //     $('.value-infor .inf').css("background-color","#FFE0B2");
+            // }
+            var html = "";
+            for(var i =0; i<arr.length;i++)
+            {
+                if(i%2==0)
+                {
+                    html += 
+                    `<div class="value-infor " >
+                    <div class="inf white" id="id">
+                        `+arr[i].id+`
+                    </div>
+                    <div class="inf white" id="name">
+                        `+arr[i].name+`
+                    </div>
+                    <div class="inf white" id="sex-info">
+                        `+arr[i].sex+`
+                    </div>
+                    <div class="inf white" id="birthday">
+                        `+arr[i].birthday+`
+                    </div>
+                    </div>`
+                }
+                else{
+                    html += 
+                    `<div class="value-infor " >
+                    <div class="inf orange" id="id">
+                        `+arr[i].id+`
+                    </div>
+                    <div class="inf orange" id="name">
+                        `+arr[i].name+`
+                    </div>
+                    <div class="inf orange" id="sex-info">
+                        `+arr[i].sex+`
+                    </div>
+                    <div class="inf orange" id="birthday">
+                        `+arr[i].birthday+`
+                    </div>
+                    </div>`
+                }
+                
+            }
+            document.getElementById("body-info").innerHTML = html;
+            $('.value-infor .white').removeClass('inf'); 
+            $('.value-infor .orange').removeClass('inf');
+            // if(count % 2 == 1)
+            // {
+            //     $('.value-infor .inf').addClass('white');
+
+            //     $('.value-infor .white').css("background-color","white");
+            // }
+            // else{
+            //     $('.value-infor .inf').addClass('orange');
+            //     $('.value-infor .orange').css("background-color","#FFE0B2");
+            // }
+            // count++;
+        //     console.log('conunt:'+ count);
+        }
+
+        
+
+
+        // else if(check_validation == true && notify_subj.length == 0)
+        // {
+        //     alert('Bạn chưa chọn môn học');
+        // }
+        // else if(check_validation == false)
+        // {
+        //     alert('Thông tin nhập không hợp lệ');
+        // }
+
+
+
+
+        // 
+        // if(notify_subj.length == 0)
+        // {
+        //     alert('Bạn chưa chọn môn học');
+        // }
+        // else{
+        //     let total;
+        //     for(var item of notify_subj)
+        //     {
+        //         // console.log($(item).text());
+        //         total += $(item).text() + '\n';
+        //     }
+        //     alert(total);
+        // }
+        
+        // console.log(notify_subj);
+        // notify_subj.forEach((item)=>
+        // {
+        //     console.log(item);
+        // });
+        // notify_subj.forEach(item)
+        // {
+        //     console.log("hahahah");
+        // }
+        
+        
+        // console.log(id);
+        // console.log($(id).text());
+
+        // for(let i in notify_subj)
+        // {
+        //     var id =$(notify_subj[i]).attr('id');
+        //     id = '#'+id;
+        //     console.log($(id).text());
+        // }
+        // var id_item;
+        // $(notify_subj).inArray()
+        // for(let i in notify_subj)
+        // {
+        //     id_item= $(notify_subj[i]).attr('id');
+        //     id_item = '#'+id_item;
+        //     console.log(id_item);
+        //     // alert($(notify_subj[i]).innerText()) ;
+        //     // console.log($('#'+id).text());
+        // }
         // alert()
         event.preventDefault();
     });
     
+
     $('#xoa').click(function()
     {
+        var list_all_subj = $('#container-subj-choosed .subj-choosed');
+        // var list_all_temp = list_all_subj;
+        console.log(list_all_subj);
+        $(list_all_subj).removeClass('subj-choosed');
+        $('#container-subj').append(list_all_subj);
+        $('.subj').css("background-color","rgb(241, 235, 235)");
+
+
         $('.row-input i').css("display","none");
         $('form').trigger("reset");
     });
@@ -378,11 +554,13 @@ function chooseSubject()
             var subj =  $(e.target).attr('id');
             // console.log(subj);
             $('#'+subj).css("background-color","#FF9800");
+            $('#'+subj).css("color","white");
             if(!list_subj_choose.includes(e.target))
             {
                 list_subj_choose.push(e.target);
             }else{
                 $('#'+subj).css("background-color","rgb(241, 235, 235)");
+                $('#'+subj).css("color","#333");
                 var index = list_subj_choose.indexOf(e.target);
                 list_subj_choose.splice(index,1);
             }
@@ -404,9 +582,9 @@ function chooseSubject()
                 
                 
                 $('.subj-choosed').css("background-color","yellow");
-                
-                console.log($('#container-subj .subj'));
-                console.log($('#container-subj-choosed .subj-choosed'));
+                $('.subj-choosed').css("color","black");
+                // console.log($('#container-subj .subj'));
+                // console.log($('#container-subj-choosed .subj-choosed'));
                 
             }
             document.querySelectorAll('.subj-choosed').forEach((item) => {
@@ -416,11 +594,13 @@ function chooseSubject()
                     var subj =  $(e.target).attr('id');
                     // console.log(subj);
                     $('#'+subj).css("background-color","#FF9800");
+                    $('#'+subj).css("color","#white");
                     if(!list_subj_choosed.includes(e.target))
                     {
                         list_subj_choosed.push(e.target);
                     }else{
                         $('#container-subj-choosed' +' #'+subj).css("background-color","yellow");
+                        $('#container-subj-choosed' +' #'+subj).css("color","black");
                         var index = list_subj_choosed.indexOf(e.target);
                         list_subj_choosed.splice(index,1);
                     }

@@ -57,7 +57,7 @@ ul{
 .container{
     display: grid;
     grid-template-columns: 840px auto;
-    height: 600px;
+    /* height: 600px; */
 
 }
 .main{
@@ -143,7 +143,7 @@ h3{
 }
 .subj-choosed
 {
-    
+
 }
 .subj{
     background-color: rgb(241, 235, 235);
@@ -201,6 +201,29 @@ h3{
     vertical-align:auto;
     grid-gap: 0.1em;
 }
+.value-infor{
+    display: grid;
+    grid-template-columns: 0.6fr 1fr 0.6fr 0.8fr;
+    grid-template-rows: 1.7em;
+    grid-gap: 0.1em;
+    color: black;
+    text-align: center;
+    vertical-align:auto;
+}
+.orange{
+    background-color: #f6ddbe;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    line-height: 1.5em;
+}
+.white{
+    background-color: white;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    line-height: 1.5em;
+}
 .inf{
     display: flex;
     text-align: center;
@@ -236,7 +259,7 @@ i{
     display: none;
 }
 .news{
-    color: #e89224;
+    color: rgb(232 120 28);
 }
 .content{
     padding: 20px 12px 20px 40px;
@@ -268,4 +291,7 @@ i{
 }
 .list-menu{
     display: inline;
+}
+.btn-hover{
+    cursor: pointer;
 }
